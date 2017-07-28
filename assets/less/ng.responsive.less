@@ -11,17 +11,61 @@
 }
 
 @media screen and (max-width: 1024px) {
-    body {}
+    body {
+
+    }
 }
 
 @media screen and (max-width: 768px) {
-    body {}
+    body {
+        & header {
+            & .container {
+                & .info,
+                & .email {
+                    height:auto;
+                    padding:5px 0;
+                }
+                & .email {
+                    width:35%;
+                }
+                & .info {
+                    width:65%;
+                }
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 530px) {
-    body {}
+@media screen and (max-width: 557px) {
+    body {
+        & header {
+            & .container {
+                & .email,
+                & .info {
+                    font-size:@copyrightFontSizeMobile;
+                    line-height:@copyrightHeightMobile;
+                    width:50%;
+                }
+                & .email {
+
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
-    body {}
+    body {
+        & header {
+            & .container {
+                & .email,
+                & .info {
+                    width:100%;
+                }
+                & .email {
+
+                }
+            }
+        }
+    }
 }

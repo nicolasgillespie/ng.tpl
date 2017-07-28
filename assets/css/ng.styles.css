@@ -1,57 +1,191 @@
+@font-face {
+  font-family: 'aubrey';
+  src: url('../fonts/aubrey-webfont.eot');
+  src: url('../fonts/aubrey-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/aubrey-webfont.woff2') format('woff2'), url('../fonts/aubrey-webfont.woff') format('woff'), url('../fonts/aubrey-webfont.ttf') format('truetype'), url('../fonts/aubrey-webfont.svg#aubreyregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  background-color: #ffffff;
+  background-color: #5a5a5a;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #404040;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
 body header {
-  -webkit-box-shadow: 0 0 20px -5px #000000;
-  -moz-box-shadow: 0 0 20px -5px #000000;
-  box-shadow: 0 0 20px -5px #000000;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 20px -5px #ffffff;
+  -moz-box-shadow: 0 0 20px -5px #ffffff;
+  box-shadow: 0 0 20px -5px #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   float: left;
   margin: 0;
   padding: 0;
+  position: relative;
   width: 100%;
+  z-index: 11;
 }
-body header .email,
-body header .info {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  color: #404040;
+body header .container {
+  -webkit-box-shadow: 0 0 20px -5px #ffffff;
+  -moz-box-shadow: 0 0 20px -5px #ffffff;
+  box-shadow: 0 0 20px -5px #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  float: left;
+  height: auto;
+  padding: 0 2%;
+  position: relative;
+  width: 96%;
+  z-index: 10;
+}
+body header .container .email,
+body header .container .info {
+  -webkit-text-shadow: 0 0 0 0 #000000;
+  -moz-text-shadow: 0 0 0 0 #000000;
+  text-shadow: 0 0 0 0 #000000;
+  color: #ffffff;
   float: left;
   font-size: 12px;
   height: 16px;
   line-height: 16px;
-  padding: 2px 1%;
+  padding: 2px 0;
   position: relative;
   text-align: left;
-  width: calc(48%);
   z-index: 9;
 }
-body header .email {
-  text-align: right;
+body header .container .info {
+  width: 75%;
 }
-body header .email a {
-  color: #404040;
+body header .container .email {
+  text-align: right;
+  width: 25%;
+}
+body header .container .email a {
+  color: #ffffff;
   text-decoration: none;
 }
 body header .header-top {
+  -webkit-text-shadow: 0 0 0 0 #000000;
+  -moz-text-shadow: 0 0 0 0 #000000;
+  text-shadow: 0 0 0 0 #000000;
   float: left;
-  padding: 0 10%;
+  height: 70px;
+  padding: 0 2%;
   position: relative;
-  width: 80%;
+  width: 96%;
   z-index: 9;
 }
+body header .header-top .title {
+  -webkit-box-shadow: 0px 5px 10px -5px #5a5a5a;
+  -moz-box-shadow: 0px 5px 10px -5px #5a5a5a;
+  box-shadow: 0px 5px 10px -5px #5a5a5a;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
+  background: #5a5a5a;
+  display: block;
+  float: left;
+  padding: 10px 15px;
+}
+body header .header-top .title h1,
+body header .header-top .title h2 {
+  float: left;
+  margin-bottom: 0;
+}
+body header .header-top .title h2 {
+  clear: left;
+  margin: 0;
+}
+body header .header-top nav {
+  float: right;
+  margin-top: 10px;
+  width: auto;
+  z-index: 99;
+}
+body header .header-top nav ul {
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body header .header-top nav ul li {
+  margin: 0 10px;
+  padding: 10px 0;
+  position: relative;
+}
+body header .header-top nav ul li.menu_item {
+  float: left;
+}
+body header .header-top nav ul li:first-child {
+  margin-left: 0;
+}
+body header .header-top nav ul li:last-child {
+  margin-right: 0;
+}
+body header .header-top nav ul li:hover .submenu {
+  height: auto;
+  max-height: 450px;
+}
+body header .header-top nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  width: 100%;
+}
+body header .header-top nav ul li a:hover {
+  color: #d2d2d2;
+}
+body header .header-top nav ul li a.selected {
+  color: #d2d2d2;
+}
+body header .header-top nav ul li .submenu {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px -5px #5a5a5a;
+  -moz-box-shadow: 0 0 10px -5px #5a5a5a;
+  box-shadow: 0 0 10px -5px #5a5a5a;
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  background-color: #777777;
+  height: 0;
+  left: -10px;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 150px;
+}
+body header .header-top nav ul li .submenu li.submenu_item {
+  margin: calc(5px) 0;
+  padding: 0 10px;
+}
+body header .header-top nav ul#mobile_menu {
+  display: none;
+}
+body .content {
+  background-color: #ffffff;
+  color: #5a5a5a;
+  float: left;
+  padding: 38px 2% calc(20px);
+  position: relative;
+  width: 96%;
+  z-index: 10;
+}
 body footer {
-  -webkit-box-shadow: 0 0 20px -5px #000000;
-  -moz-box-shadow: 0 0 20px -5px #000000;
-  box-shadow: 0 0 20px -5px #000000;
+  -webkit-box-shadow: 0 0 20px -5px #ffffff;
+  -moz-box-shadow: 0 0 20px -5px #ffffff;
+  box-shadow: 0 0 20px -5px #ffffff;
+  background-color: #5a5a5a;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   bottom: 0;
   float: left;
@@ -65,6 +199,17 @@ body footer .footer {
   font-size: 12px;
   text-align: center;
   width: 100%;
+}
+body h1,
+body h2 {
+  -webkit-text-shadow: 0 0 0 0 #000000;
+  -moz-text-shadow: 0 0 0 0 #000000;
+  text-shadow: 0 0 0 0 #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 0;
+}
+body h1 {
+  font-family: 'aubrey';
 }
 .invisible {
   display: none!important;
@@ -114,4 +259,31 @@ body footer .footer {
   float: right;
   margin: 10px 0;
   width: auto;
+}
+@media screen and (max-width: 768px) {
+  body header .container .info,
+  body header .container .email {
+    height: auto;
+    padding: 5px 0;
+  }
+  body header .container .email {
+    width: 35%;
+  }
+  body header .container .info {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 557px) {
+  body header .container .email,
+  body header .container .info {
+    font-size: 16px;
+    line-height: 18px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  body header .container .email,
+  body header .container .info {
+    width: 100%;
+  }
 }

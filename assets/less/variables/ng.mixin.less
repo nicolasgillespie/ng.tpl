@@ -4,12 +4,27 @@
           border-radius: @radius;
 }
 
-
 .box-shadow(@shadow: 0 0 0 0 #fff) {
   -webkit-box-shadow: @shadow;
      -moz-box-shadow: @shadow;
           box-shadow: @shadow;
 }
+
+.text-shadow(@shadow: 0 0 0 0 #fff) {
+  -webkit-text-shadow: @shadow;
+     -moz-text-shadow: @shadow;
+          text-shadow: @shadow;
+}
+
+.transition(@transition: width 1s) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+        -ms-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+
 
 .gradient-2-color(@color1, @color2) {
   background: @color1; /* Old browsers */

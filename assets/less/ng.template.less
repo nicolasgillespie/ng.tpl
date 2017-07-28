@@ -1,59 +1,181 @@
 body {
-    background-color: @lightColor;
+    background-color:@grayColor;
     .user-select(none);
     color:@fontColor;
+    font-family: @montserrat;
     margin:0;
     padding:0;
 
     & header {
-        .box-shadow(0 0 20px -5px @darkColor);
-        border-bottom:1px solid @darkColor_rgba_light;
+        .box-shadow(0 0 20px -5px @lightColor);
+        // border-bottom:1px solid @darkColor_rgba_light;
+        border-bottom:1px solid @lightColor_rgba_light;
         float:left;
         margin:0;
         padding:0;
+        position:relative;
         width:@full;
+        z-index:11;
 
-        & .email,
-        & .info {
-            border-bottom:1px solid @darkColor_rgba_light;
-            color:@fontColor;
+        & .container {
+            .box-shadow(0 0 20px -5px @lightColor);
+            border-bottom:1px solid @lightColor_rgba_light;
             float:left;
-            font-size:@copyrightFontSize;
-            height:@copyrightHeight;
-            line-height:@copyrightHeight;
-            padding:2px 1%;
+            height:auto;
+            padding:0 2%;
             position:relative;
-            text-align:left;
-            width:calc(@half - 2%);
-            z-index:9;
-        }
+            width:96%;
+            z-index:10;
 
-        & .email {
-            text-align:right;
-
-            & a {
+            & .email,
+            & .info {
+                .text-shadow(0 0 0 0 @darkColor);
                 color:@fontColor;
-                text-decoration:none;
+                float:left;
+                font-size:@copyrightFontSize;
+                height:@copyrightHeight;
+                line-height:@copyrightHeight;
+                padding:2px 0;
+                position:relative;
+                text-align:left;
+                z-index:9;
+            }
+
+            & .info {
+                width:@threequarter
+            }
+            & .email {
+                text-align:right;
+                width:@quarter;
+
+                & a {
+                    color:@fontColor;
+                    text-decoration:none;
+                }
             }
         }
 
         & .header-top {
+            .text-shadow(0 0 0 0 @darkColor);
             float:left;
-            padding:0 10%;
+            height:70px;
+            padding:0 2%;
             position:relative;
-            width:80%;
+            width:96%;
             z-index:9;
+
+            & .title {
+                .box-shadow(0px 5px @normalSpacing -5px @grayColor);
+                .border-radius(0 0 @normalSpacing @normalSpacing);
+                border-radius: 10px;
+                background:@grayColor;
+                display:block;
+                float:left;
+                padding: 10px 15px;
+
+                & h1,
+                & h2 {
+                    float:left;
+                    margin-bottom:0;
+                }
+                & h2 {
+                    clear:left;
+                    margin:0;
+                }
+            }
+
+            & nav {
+                float:right;
+                margin-top:@normalSpacing;
+                width:auto;
+                z-index:99;
+
+                & ul {
+                    float:left;
+                    list-style-type: none;
+                    margin:0;
+                    padding:0;
+                    width:@full;
+
+                    & li {
+                        margin:0 @normalSpacing;
+                        padding:@normalSpacing 0;
+                        position:relative;
+
+                        &.menu_item {
+                            float:left;
+                        }
+                        &:first-child { margin-left:0; }
+                        &:last-child { margin-right:0; }
+                        &:hover {
+
+                            & .submenu {
+                                height:auto;
+                                max-height:450px;
+
+                            }
+                        }
+
+                        & a {
+                            color:@fontColor;
+                            text-decoration:none;
+                            width:@full;
+
+                            &:hover {
+                                color:@menuHoverColor;
+                                // text-decoration:underline;
+                            }
+                            &.selected {
+                                color:@menuHoverColor;
+                            }
+                        }
+                        & .submenu {
+                            .border-radius(5px);
+                            .box-shadow(0 0 @normalSpacing -5px @grayColor);
+                            .transition(max-height 1s);
+                            background-color:@mobileMenuColor;
+                            // border:1px solid @darkColor_rgba_light;
+                            height:0;
+                            left:-@normalSpacing;
+                            margin-top:@normalSpacing;
+                            max-height:0;
+                            overflow:hidden;
+                            padding: 0;
+                            position:absolute;
+                            width: 150px;
+
+                            & li.submenu_item {
+                                margin:calc(@normalSpacing / 2) 0;
+                                padding:0 @normalSpacing;
+                            }
+
+
+                        }
+                    }
+
+                    &#mobile_menu {
+                        display:none;
+                    }
+                }
+            }
         }
     }
 
     .content {
-
+        background-color:@lightColor;
+        color:@grayColor;
+        float:left;
+        padding:38px 2% calc(2 * @normalSpacing);
+        position:relative;
+        width:96%;
+        z-index:10;
     }
 
 
     & footer {
-        .box-shadow(0 0 20px -5px @darkColor);
+        .box-shadow(0 0 20px -5px @lightColor);
 
+        background-color:@grayColor;
         border-top:1px solid @darkColor_rgba_light;
         bottom:0;
         float:left;
@@ -69,4 +191,15 @@ body {
             width:@full;
         }
     }
+
+    & h1,
+    & h2 {
+        .text-shadow(0 0 0 0 @darkColor);
+        font-family: @montserrat;
+        margin:10px 0;
+    }
+    & h1 {
+        font-family: @aubrey;
+    }
+
 }
